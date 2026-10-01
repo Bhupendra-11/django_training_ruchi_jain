@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sign up page</h1>
+    <form action="{% url 'stud' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="s_username">Username: </label>
+        </div>
+        <div>
+            <input type="text" name="s_username" id="s_username" required>
+            <span>{{ errormsg }}</span>
+        </div>
+        <div>
+            <label for="s_password">Password: </label>
+        </div>
+        <div>
+            <input type="password" name="s_password" id="s_password" required>
+        </div>
+        <div>
+            <label for="name">Name: </label>
+        </div>
+        <div>
+            <input type="text" name="s_name" id="s_name" required>
+        </div>
+        <div>
+            <label for="s_mobile">Student Mobile no.: </label>
+        </div>
+        <div>
+            <input type="text" name="s_mobile" id="s_mobile" required>
+        </div>
+        <div>
+            <label for="s_email">Student Email: </label>
+        </div>
+        <div>
+            <input type="text" name="s_email" id="s_email" required>
+        </div>
+        <div>
+            <input type="Submit" value="SignUp">
+        </div>
+    </form>
+</body>
+</html>

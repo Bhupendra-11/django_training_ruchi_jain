@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'saveStudent' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="s_id">
+                Student ID
+            </label>
+        </div>
+        <div>
+            <input type="text", name="s_id", id="s_id">
+        </div>
+        <div>
+            <label for="s_name">
+                Student Name
+            </label>
+        </div>
+        <div>
+            <input type="text", name="s_name", id="s_name">
+        </div>
+        <div>
+            <label for="s_branch">
+                Student Branch
+            </label>
+        </div>
+        <div>
+            <input type="text", name="s_branch", id="s_branch">
+        </div>
+        <div>
+            <input type="Submit", value="save">
+        </div>
+    </form>
+</body>
+</html>

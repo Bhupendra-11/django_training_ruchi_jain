@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>This is LOGIN Page</h1>
+    </div>
+    <form action="{% url 'login_valid' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="username">Username: </label>
+        </div>
+        <div>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="passsword">Password: </label>
+        </div>
+        <div>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+        <span>{{ erg }}</span>
+        <br><a href="{% url 'signup' %}">Create Account</a>
+    </form>
+</body>
+</html>
